@@ -17,17 +17,21 @@ import lombok.ToString;
 @ToString
 @Entity
 @Table(name = "PRODUCT_TYPE")
-public class ProductType implements Serializable  {
+public class ProductType implements Serializable {
 
     @Id
     @Column(name = "CODE_PRODUCT_TYPE", length = 20, nullable = false)
     private String code;
+
     @Column(name = "NAME", length = 100, nullable = false)
     private String name;
+
     @Column(name = "CLIENT_TYPE", length = 3, nullable = false)
     private String clientType;
+
     @Column(name = "ALLOW_EARN_INTEREST", length = 1, nullable = false)
     private String allowEarnInterest;
+
     @Column(name = "TEMPORALITY_INTEREST", length = 3)
     private String temporalityInterest;
 
@@ -59,5 +63,4 @@ public class ProductType implements Serializable  {
             return false;
         return true;
     }
-
 }

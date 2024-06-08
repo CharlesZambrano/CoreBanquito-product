@@ -25,22 +25,31 @@ public class Product implements Serializable {
 
     @EmbeddedId
     private ProductPK pk;
+
     @Column(name = "NAME", length = 100, nullable = false)
     private String name;
+
     @Column(name = "CODE_INTEREST_RATE", length = 10, nullable = false)
     private String codeInterestRate;
+
     @Column(name = "CODE_SEGMENT", length = 10, nullable = false)
     private String codeSegment;
+
     @Column(name = "STATE", length = 3, nullable = false)
     private String state;
+
     @Column(name = "START_DATE", nullable = false)
     private Date startDate;
+
     @Column(name = "END_DATE")
     private Date endDate;
+
     @Column(name = "ALLOW_DEBIT_CARD")
     private String allowDebitCard;
+
     @Column(name = "ALOOW_TRANSFERENCES")
     private String allowTransferences;
+
     @Column(name = "MINIMUM_OPENING_BALANCE", precision = 17, scale = 2, nullable = false)
     private BigDecimal minimumOpeningBalance;
 
@@ -76,7 +85,4 @@ public class Product implements Serializable {
             return false;
         return true;
     }
-
-    
-    
 }
